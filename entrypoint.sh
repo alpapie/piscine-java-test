@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -e
-
+sudo rm -r project
 mkdir -p project/src/main/java
 mkdir -p project/src/test/java
 
