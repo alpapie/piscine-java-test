@@ -10,16 +10,8 @@ CODE_EDITOR_RUN_ONLY="${CODE_EDITOR_RUN_ONLY:-$EXAM_RUN_ONLY}"
 # ! support both variables CODE_EDITOR_MODE and EXAM_MODE
 CODE_EDITOR_MODE="${CODE_EDITOR_MODE:-$EXAM_MODE}"
 
-if test "$CODE_EDITOR_RUN_ONLY" = true; then
-	cd ./student/
-    cp -rf *.java ../project/src/main/java
-    cd ../project/src/main/java
-    javac *.java -d build
-    java -cp build ExerciseRunner
-	exit
-fi
+
 if [ -z "$EDITOR_FILES" ]; then
-    echo "here ${EXERCISE}"
     cp -rf "./student/${EXERCISE}/"*.java ./project/src/main/java
 else
     cd ./student/
